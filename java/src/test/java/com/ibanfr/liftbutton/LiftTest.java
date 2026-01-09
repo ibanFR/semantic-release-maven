@@ -22,4 +22,16 @@ class LiftTest {
                 .as("Lift should be created")
                 .isNotNull();
     }
+
+    @Test
+    @DisplayName("doors should be CLOSED when Lift is created")
+    void doors_should_be_CLOSED_when_Lift_is_created() {
+
+        //given
+        Lift lift = new Lift();
+
+        //then
+        assertThat(lift.doors())
+                .isEqualTo("CLOSED");
+    }
 }
